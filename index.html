@@ -18,21 +18,24 @@
         </a-assets>
 
         <a-entity id="rig" position="0 2.5 1" rotation="-5 0 0">
-            <a-entity id="camera" camera look-controls></a-entity>
+            <a-entity id="camera" camera look-controls wasd-controls></a-entity>
           </a-entity>
 
+        <!-- Moon -->
         <a-sphere position="2.50452 10.53426 -24.21508" radius="1.25" color="#FFFFF" material="" geometry=""></a-sphere>
 
+        <!-- Bridge -->
         <a-entity gltf-model="models/forest_bridge/scene.gltf" scale="3 1.5 1.5" rotation="0 90 -7.29" position="0 0.51 -3.82"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.2 0.2 0.4" rotation="" position="0 -0.05 -10.73"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.2 0.2 0.4" rotation="" position="0 -0.05 -17.4057"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.3 0.2 0.6" rotation="0 90 0" position="0 -0.05 -20.53588"></a-entity>
 
+        <!-- Bushes -->
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="1.32979 1.26367 -1.05763" rotation="90 -18.37 0"></a-entity>
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="-1.6198 1.26917 -0.98232" rotation="90 14.999999999999998 0"></a-entity>
 
-
-        <a-box position="0 0.54544 -0.4156" rotation="" color="#4CC3D9" material="color: #271a11" geometry="" scale="11 0.98 2"></a-box>
+        <!-- Ground -->
+        <a-box position="0 0.545 3.76234" rotation="" color="#4CC3D9" material="color: #271a11" geometry="" scale="50 0.98 10"></a-box>
 
         <a-ocean color="#0C374F" width="70" depth="50" density="5" speed="0.01" position="0 -1 -25"></a-ocean>
         <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#0d3775"></a-plane> -->
