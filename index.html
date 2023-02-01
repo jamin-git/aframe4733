@@ -8,8 +8,7 @@
 </head>
 
 <body>
-    <a-scene>
-        <!-- Importing the 3D Model Assets -->
+    <a-scene fog="type: linear; color: #500">        <!-- Importing the 3D Model Assets -->
         <a-assets>
             <a-assets-item id="bridge1" src="models/wooden_bridge_dock/scene.gltf"></a-assets-item>
             <a-assets-item id="bridge2" src="models/forest_bridge/scene.gltf"></a-assets-item>
@@ -22,8 +21,7 @@
           </a-entity>
 
         <!-- Moon -->
-        <a-sphere position="2.50452 10.53426 -24.21508" radius="1.25" color="#FFFFF" material="" geometry=""></a-sphere>
-
+        <a-sphere position="2.50452 15.53426 -54.21508" radius="3.25" color="#FFFFF" material="roughness: 0.3; metalness: .3;" geometry=""></a-sphere>
         <!-- Bridge -->
         <a-entity gltf-model="models/forest_bridge/scene.gltf" scale="3 1.5 1.5" rotation="0 90 -7.29" position="0 0.51 -3.82"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.2 0.2 0.4" rotation="" position="0 -0.05 -10.73"></a-entity>
@@ -34,9 +32,13 @@
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="1.32979 1.26367 -1.05763" rotation="90 -18.37 0"></a-entity>
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="-1.6198 1.26917 -0.98232" rotation="90 14.999999999999998 0"></a-entity>
 
+        <!-- Mountain-->
+        <a-cone segments-radial="30" height="25.5" position="-1.46753 2.55377 -37.00556" color="#023020" radius-bottom="30" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>        
+        <a-cone segments-radial="30" height="25.5" position="-19.68436 2.66154 -43.67421" color="#454B1B" radius-bottom="55" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>        
+        <a-cone segments-radial="40" height="19.5&quot;" position="14.65085 1.83906 -38.37768" color="#355E3B" radius-bottom="45" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>
+
         <!-- Ground -->
         <a-box position="0 0.545 3.76234" rotation="" color="#4CC3D9" material="color: #271a11" geometry="" scale="50 0.98 10"></a-box>
-
         <a-ocean color="#0C374F" width="70" depth="50" density="5" speed="0.01" position="0 -1 -25"></a-ocean>
         <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#0d3775"></a-plane> -->
         <a-sky color="#176EAC"></a-sky>
