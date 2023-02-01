@@ -5,25 +5,29 @@
 
     <!-- Adding the A-Frame Extras Library -->
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@fb96ab2/dist/aframe-extras.min.js"></script>
+
+    
 </head>
 
 <body>
-    <a-scene fog="type: linear; color: #500">        <!-- Importing the 3D Model Assets -->
+    <a-scene fog="type: linear; color: #500">
+        <!-- Importing the 3D Model Assets -->
         <a-assets>
             <a-assets-item id="bridge1" src="models/wooden_bridge_dock/scene.gltf"></a-assets-item>
             <a-assets-item id="bridge2" src="models/forest_bridge/scene.gltf"></a-assets-item>
             <a-assets-item id="bush" src="models/tbush/scene.gltf"></a-assets-item>
-            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
         </a-assets>
 
         <a-entity id="rig" position="0 2.5 1" rotation="-5 0 0">
             <a-entity id="camera" camera look-controls wasd-controls></a-entity>
           </a-entity>
 
-        <!-- Moon -->
+        <!-- Moon & Light -->
         <a-sphere position="2.50452 15.53426 -54.21508" radius="3.25" color="#FFFFF" material="roughness: 0.3; metalness: .3;" geometry=""></a-sphere>
+        <a-sphere position="2.5 15.5 -54.2" radius="3.25" color="#FFFFF"></a-sphere>
+
         <!-- Bridge -->
-        <a-entity gltf-model="models/forest_bridge/scene.gltf" scale="3 1.5 1.5" rotation="0 90 -7.29" position="0 0.51 -3.82"></a-entity>
+        <a-entity gltf-model="models/forest_bridge/scene.gltf" scale="3 1.5 1.5" rotation="0 90 -7.29" position="0 0.51 -4.09068"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.2 0.2 0.4" rotation="" position="0 -0.05 -10.73"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.2 0.2 0.4" rotation="" position="0 -0.05 -17.4057"></a-entity>
         <a-entity gltf-model="models/wooden_bridge_dock/scene.gltf" scale="0.3 0.2 0.6" rotation="0 90 0" position="0 -0.05 -20.53588"></a-entity>
@@ -31,16 +35,34 @@
         <!-- Bushes -->
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="1.32979 1.26367 -1.05763" rotation="90 -18.37 0"></a-entity>
         <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="-1.6198 1.26917 -0.98232" rotation="90 14.999999999999998 0"></a-entity>
+        <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="2.33166 1.264 0.19969" rotation="90 -49.07 0"></a-entity>
+        <a-entity gltf-model="models/cbush/scene.gltf" scale="0.2 0.2 0.2" position="-2.36411 1.26566 0.31654" rotation="90 40 0"></a-entity>
 
         <!-- Mountain-->
-        <a-cone segments-radial="30" height="25.5" position="-1.46753 2.55377 -37.00556" color="#023020" radius-bottom="30" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>        
-        <a-cone segments-radial="30" height="25.5" position="-19.68436 2.66154 -43.67421" color="#454B1B" radius-bottom="55" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>        
-        <a-cone segments-radial="40" height="19.5&quot;" position="14.65085 1.83906 -38.37768" color="#355E3B" radius-bottom="45" material="" geometry="" scale="0.3 0.3 0.3"></a-cone>
+        <a-entity>
+            <a-cone segments-radial="30" height="25.5" position="-38.32705 2.05872 -48.41926" color="#03141f" radius-bottom="80" material="" geometry="height: 30;" scale="0.4 0.3 0.3" rotation="0 25 0"></a-cone>
+            <a-cone segments-radial="30" height="25.5" position="-13.67767 2.55377 -74.19604" color="#041e2e" radius-bottom="50" material="" geometry="height: 60; radiusBottom: 100" scale="0.6 0.3 0.3"></a-cone>
+            <a-cone segments-radial="40" height="19.5&quot;" position="25.20167 1.83906 -52.53003" color="#000e17" radius-bottom="60" material="" geometry="height: 22" scale="0.5 0.3 0.3" rotation="0 -35 0"></a-cone>
+        </a-entity>
+        <a-entity position="" rotation="0 90 0">
+            <a-cone segments-radial="30" height="25.5" position="-38.32705 2.05872 -48.41926" color="#03141f" radius-bottom="80" material="" geometry="height: 30" scale="0.4 0.3 0.3" rotation="0 25 0"></a-cone>
+            <a-cone segments-radial="30" height="25.5" position="-13.67767 2.55377 -74.19604" color="#041e2e" radius-bottom="50" material="" geometry="height: 60; radiusBottom: 100" scale="0.6 0.3 0.3"></a-cone>
+            <a-cone segments-radial="40" height="19.5&quot;" position="25.20167 1.83906 -52.53003" color="#000e17" radius-bottom="60" material="" geometry="height: 22" scale="0.5 0.3 0.3" rotation="0 -35 0"></a-cone>
+        </a-entity>
+        <a-entity position="" rotation="0 180 0">
+            <a-cone segments-radial="30" height="25.5" position="-38.32705 2.05872 -48.41926" color="#03141f" radius-bottom="80" material="" geometry="height: 30" scale="0.4 0.3 0.3" rotation="0 25 0"></a-cone>
+            <a-cone segments-radial="30" height="25.5" position="-13.67767 2.55377 -74.19604" color="#041e2e" radius-bottom="50" material="" geometry="height: 60; radiusBottom: 100" scale="0.6 0.3 0.3"></a-cone>
+            <a-cone segments-radial="40" height="19.5&quot;" position="25.20167 1.83906 -52.53003" color="#000e17" radius-bottom="60" material="" geometry="height: 22" scale="0.5 0.3 0.3" rotation="0 -35 0"></a-cone>
+        </a-entity>
+        <a-entity position="" rotation="0 270 0">
+            <a-cone segments-radial="30" height="25.5" position="-38.32705 2.05872 -48.41926" color="#03141f" radius-bottom="80" material="" geometry="height: 30" scale="0.4 0.3 0.3" rotation="0 25 0"></a-cone>
+            <a-cone segments-radial="30" height="25.5" position="-13.67767 2.55377 -74.19604" color="#041e2e" radius-bottom="50" material="" geometry="height: 60; radiusBottom: 100" scale="0.6 0.3 0.3"></a-cone>
+            <a-cone segments-radial="40" height="19.5&quot;" position="25.20167 1.83906 -52.53003" color="#000e17" radius-bottom="60" material="" geometry="height: 22" scale="0.5 0.3 0.3" rotation="0 -35 0"></a-cone>
+        </a-entity>
 
-        <!-- Ground -->
-        <a-box position="0 0.545 3.76234" rotation="" color="#4CC3D9" material="color: #271a11" geometry="" scale="50 0.98 10"></a-box>
-        <a-ocean color="#0C374F" width="70" depth="50" density="5" speed="0.01" position="0 -1 -25"></a-ocean>
-        <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#0d3775"></a-plane> -->
+        <!-- Ground, Sky, and Ocean -->
+        <a-box position="0 0.545 23.73912" rotation="" color="#4CC3D9" material="color: #271a11" geometry="" scale="120 0.98 50"></a-box>
+        <a-ocean color="#0C374F" width="150" depth="150" density="15" speed="0.1" position="0 -1 -25"></a-ocean>
         <a-sky color="#176EAC"></a-sky>
         
     </a-scene>
